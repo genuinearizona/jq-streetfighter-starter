@@ -1,18 +1,18 @@
 $(document).ready(function() {
   $('.ryu').mouseenter(function() {
     // mouse over changes Ryu from a static position to a ready animated state //
-    $('.ryu-still').hide();
+    $('.ryu-hide').hide();
     $('.ryu-ready').show();
   })
   .mouseleave(function() {
     // mouse over changes Ryu from an animated state to immobile position //
+    $('.ryu-hide').hide();
     $('.ryu-still').show();
-    $('.ryu-ready').hide();
-  })
+})
   .mousedown(function(){
   playHadouken();
    // mouse click shoots an animated blue fireball a hadouken to the left of the Ryu character //
-    $('.ryu-ready').hide();
+    $('.ryu-hide').hide();
     $('.ryu-throwing').show();
     $('.hadouken').finish().show().animate(
     {'left':'1020px'},
@@ -23,7 +23,7 @@ $(document).ready(function() {
   })
   })
 .mouseup(function(){
-$('.ryu-throwing').hide();
+$('.ryu-hide').hide();
 $('.ryu-ready').show();
 });
 });
@@ -35,14 +35,14 @@ function playHadouken() {
 $(document).keydown(function(e) {
         if (e.keyCode == 88) {
             // pressing the x alphabet on the keyboard move Ryu physical status to an arms folded postition //
-            $('.ryu-ready').hide();
+            $('.ryu-hide').hide();
             $('.ryu-cool').show(); 
         }
     })
     $(document).keyup(function(e) {
         if (e.keyCode == 88) {
+            $('.ryu-hide').hide();
             $('.ryu-ready').show();
-            $('.ryu-cool').hide();
         }
         });
 
