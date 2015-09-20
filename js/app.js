@@ -27,6 +27,7 @@ $('.ryu-hide').hide();
 $('.ryu-ready').show();
 });
 });
+// ryu exlaims hadouken as he throws his animte fire ball hadouken //
 function playHadouken() {
         $('#hadouken-sound')[0].volume = 0.5;
         $('#hadouken-sound')[0].load();
