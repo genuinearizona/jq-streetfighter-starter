@@ -27,6 +27,7 @@ $('.ryu-hide').hide();
 $('.ryu-ready').show();
 });
 });
+// Ryu says hadouken as he's throwing his hadouken //
 function playHadouken() {
         $('#hadouken-sound')[0].volume = 0.5;
         $('#hadouken-sound')[0].load();
@@ -36,7 +37,7 @@ $(document).keydown(function(e) {
         if (e.keyCode == 88) {
             // pressing the x alphabet on the keyboard move Ryu physical status to an arms folded postition //
             $('.ryu-hide').hide();
-            $('.ryu-cool').show(); 
+            $('.ryu-cool').show();
         }
     })
     $(document).keyup(function(e) {
