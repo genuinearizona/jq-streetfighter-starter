@@ -6,8 +6,8 @@ $(document).ready(function() {
   })
   .mouseleave(function() {
     // mouse over changes Ryu from an animated state to immobile position //
-    $('.ryu-still').show();
     $('.ryu-ready').hide();
+    $('.ryu-still').show();
   })
   .mousedown(function(){
   playHadouken();
@@ -41,8 +41,8 @@ $(document).keydown(function(e) {
     })
     $(document).keyup(function(e) {
         if (e.keyCode == 88) {
-            $('.ryu-ready').show();
             $('.ryu-cool').hide();
+            $('.ryu-ready').show();    
         }
         });
 
